@@ -1,1 +1,2 @@
 print(sum([abs(int(sorted([p.replace('   ', ' ').split(' ')[0] for p in open('input01.txt').read().split('\n')])[i]) - int(sorted([p.replace('   ', ' ').split(' ')[1] for p in open('input01.txt').read().split('\n')])[i])) for i in range(len(open('input01.txt').read().split('\n')))]))
+print(sum([i * [int(x.split(' ')[1]) for x in open('input01.txt').read().replace('   ', ' ').split("\n")].count(i) for i in [int(x.split(' ')[0]) for x in open('input01.txt').read().replace('   ', ' ').split("\n")]]))
